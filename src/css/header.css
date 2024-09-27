@@ -3,6 +3,7 @@
     justify-content: space-between;
     height: 70px;
     background-color: white;
+    align-items: center;
 }
 
 
@@ -12,21 +13,23 @@
 
 #message-section {
     padding-right: 50px;
-}
+    font-family: var(--header-message-font);
+    font-size: clamp(0.5rem, 5vw, 1rem);
+    }
 
 .title-text {
-    font-size: clamp(1rem, 5vw, 3rem);
+    font-size: clamp(2rem, 5vw, 3rem);
     font-family: var(--header-logo-font); 
 }
 
 .subtitle-text {
     font-size: clamp(1rem, 1vw, 3rem);
-    font-family: var(--header-log-subtitle-font);
+    font-family: var(--header-logo-subtitle-font);
 }
 
 
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 917px) {
     .header-flex {
         flex-direction: column;
         align-items: center;
@@ -37,7 +40,7 @@
     }
     
     #message-section {
-        padding-right: 0px;
+        padding: 0px;
     }
 
     .centre-text {
