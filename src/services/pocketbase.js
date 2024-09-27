@@ -6,6 +6,11 @@ export const fetchHeaderData = async () => {
     return data;
 }
 
+export const fetchHeroData = async () => {
+    const data = await pb.collection('hero_details').getList();
+    return data 
+}
+
 export default pb;
 
 

@@ -1,14 +1,15 @@
 .header-flex {
     display: flex;
     justify-content: space-between;
-    height: 70px;
+    height: fit-content;
     background-color: white;
     align-items: center;
+    background-color: var(--header-bg-color)
 }
 
 
 #logo-section {
-    padding-left: 50px;
+    padding: 0px 0px 10px 50px;
 }
 
 #message-section {
@@ -41,6 +42,7 @@
     
     #message-section {
         padding: 0px;
+        text-align: center;
     }
 
     .centre-text {

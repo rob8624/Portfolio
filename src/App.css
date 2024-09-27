@@ -8,9 +8,13 @@
 
 /* Varibles */
 :root {
+    /* fonts */
     --header-logo-font: 'Mukta', sans-serif;
     --header-logo-subtitle-font: "Julius Sans One", sans-serif;
     --header-message-font: "Lexend", sans-serif;
+
+    /* color */
+    --header-bg-color: #cbf2f1;
 };
 
 
