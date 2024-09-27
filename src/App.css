@@ -1,12 +1,15 @@
+
+/* Global styles */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
+/* Varibles */
 :root {
-    --border-color:hsl(199, 72.5%, 84.3%);
-    --site-bg-color:azure;
+    --header-logo-font: 'Mukta', sans-serif;
+    --header-log-subtitle-font: "Julius Sans One", sans-serif;
 };
 
 

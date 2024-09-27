@@ -16,10 +16,12 @@
 
 .title-text {
     font-size: clamp(1rem, 5vw, 3rem);
+    font-family: var(--header-logo-font); 
 }
 
 .subtitle-text {
     font-size: clamp(1rem, 1vw, 3rem);
+    font-family: var(--header-log-subtitle-font);
 }
 
 
