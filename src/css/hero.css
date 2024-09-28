@@ -1,3 +1,41 @@
 .hero-flex {
     display: flex;
+    padding: 5% 20% 5% 20%;
+    
+}
+
+.line {
+    border-left: 2px solid black;
+    height: auto; /* Height for the vertical line */
+    margin:0px 100px 0px 100px;
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 5vw, 30rem);
+    flex-shrink: 1;
+   }
+
+
+
+@media screen and (max-width: 917px) {
+
+    .hero-flex {
+        
+        flex-direction: column;
+        align-items: center;
+        gap:10px;
+    }
+
+   
+
+    .line {
+        border-left: none; /* Remove the vertical line */
+        border-top: 2px solid black; /* Add the horizontal line */
+        width: 100%; /* Width for the horizontal line */
+        height: 1px; /* Set height to 0 */
+    }
+
+    .hero-message {
+        text-align: center;
+    }
 }

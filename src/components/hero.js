@@ -8,8 +8,9 @@ export default function Hero({ heroData }) {
             {console.log(heroData)}
             {heroData.map((items, index) => (
                 <div key={items.id} id="flex-wrapper" className='hero-flex'>
-                    <div>{items.title}</div>
-                    <div>{items.message}</div>
+                    <div className='hero-title'>{items.title}</div>
+                    <div className="line"></div>
+                    <div className='hero-message'>{items.message}</div>
                 </div>
             ))}
           </div>
