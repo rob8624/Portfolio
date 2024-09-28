@@ -11,9 +11,14 @@
 }
 
 .hero-title {
-    font-size: clamp(1.5rem, 5vw, 30rem);
+    font-size: clamp(1.5rem, 6vw, 30rem);
     flex-shrink: 1;
    }
+
+.hero-message{
+    align-self: center;
+    
+}
 
 
 
@@ -26,9 +31,7 @@
         gap:10px;
     }
 
-   
-
-    .line {
+   .line {
         border-left: none; /* Remove the vertical line */
         border-top: 2px solid black; /* Add the horizontal line */
         width: 100%; /* Width for the horizontal line */
