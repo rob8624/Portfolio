@@ -7,7 +7,7 @@ export default function Header({ headerData }) {
     <div>
         {headerData.map((items, index) => (
             <div id="header" className='header-flex' key={items.id}>
-            <div key={items.id} id="logo-section">
+            <div id="logo-section">
                 <div className='title-text centre-text'>{items.Title}</div>
                 <div className='subtitle-text centre-text'>{items.Subtitle}</div>
             </div>
