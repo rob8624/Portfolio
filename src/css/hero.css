@@ -11,18 +11,23 @@
 }
 
 .hero-title {
-    font-size: clamp(1.5rem, 6vw, 30rem);
+    font-size: clamp(1rem, 6vw, 30rem);
     flex-shrink: 1;
+    font-family: var(--hero-title-font);
    }
 
 .hero-message{
-    align-self: center;
-    
+    align-self:flex-end;
+}
+
+.socials-flex {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
 }
 
 
-
-@media screen and (max-width: 917px) {
+@media screen and (max-width: 1363px) {
 
     .hero-flex {
         
@@ -38,6 +43,10 @@
         height: 1px; /* Set height to 0 */
     }
 
+
+    .hero-title{
+        text-align: center;
+    }
     .hero-message {
         text-align: center;
     }
