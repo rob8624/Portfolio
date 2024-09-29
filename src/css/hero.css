@@ -18,19 +18,50 @@
 
 .hero-message{
     align-self:flex-end;
+    font-family: var(--hero-title-font);
 }
 
 .socials-flex {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 50px;
+    margin-bottom: 5%;
 }
+
+.socials-item {
+    flex: 1; 
+    flex-grow: 0;
+   
+}
+
+.socials-icons {
+    flex: 2;
+    flex-grow: 0;
+    display: flex;
+    gap: 2px;
+    align-items: center;
+}
+
+.hero-btn {
+    background-color: rgb(187, 187, 239);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.socials-arrow {
+    align-self: center;
+    margin-right: 10px;
+    margin-left: 2px;
+}
+    
+    
+
 
 
 @media screen and (max-width: 1363px) {
 
     .hero-flex {
-        
         flex-direction: column;
         align-items: center;
         gap:10px;
@@ -46,8 +77,15 @@
 
     .hero-title{
         text-align: center;
+
+       
     }
     .hero-message {
         text-align: center;
     }
+
+    .socials-flex {
+        justify-content: space-between;
+    }
+    
 }

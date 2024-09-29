@@ -12,8 +12,16 @@ export default function Hero({ heroData }) {
                     <div className="line"></div>
                     <div className='hero-message'>
                         <div className='socials-flex'>
-                            <div>Projects</div>
-                            <div>icons</div>
+                            <div>
+                                <button className='socials-item hero-btn'>Projects</button>
+                                <i class="fa-solid fa-arrow-down socials-arrow"></i>
+                            </div>
+                            <div className='socials-icons'>
+                                <i class="fa-brands fa-facebook fa-1x"></i>
+                                <i class="fa-brands fa-twitter fa-1x"></i>
+                                <i class="fa-brands fa-instagram fa-1x"></i>
+                                <i class="fa-brands fa-linkedin fa-1x"></i>
+                            </div>
                         </div>
                         <div>{items.message}</div>
                     </div>
