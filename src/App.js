@@ -33,7 +33,7 @@ useEffect(() => {
     setHeroData(heroData.items);
     setSocialsData(socialsData.items)
     setAboutData(aboutData.items)
-    setSkillsLogos(skillsLogos.items[0].field)
+    setSkillsLogos(skillsLogos)
 
 }
    catch(error){

@@ -22,8 +22,22 @@ export const fetchAboutData = async () => {
 }
 
 export const fetchSkillsLogos = async () => {
-    const data = await pb.collection('skills_logos').getList();
-    return data
+    try {
+        const data = await pb.collection('skills_logos').getList();
+        
+        // Assuming 'field' contains the array of logos
+        const images = data.items[0].field; // Adjust this if needed
+
+        // Generate URLs for each logo
+        const logoUrls = images.map((filename) => 
+            pb.files.getUrl(data.items[0], filename) // Use the correct record and filename
+        );
+
+        console.log('Logo URLs:', logoUrls);
+        return logoUrls; // Return the array of URLs
+    } catch (error) {
+        console.error('Error fetching skills logos:', error);
+    }
 }
 
 export default pb;

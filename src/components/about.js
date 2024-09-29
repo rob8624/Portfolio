@@ -14,9 +14,14 @@ export default function About({ aboutData, skillsLogos }) {
                 </div>
                 <div dangerouslySetInnerHTML={{ __html: items.About }} className='about-text'></div>
                 <div className='skills-title'>Skills</div>
-                {skillsLogos.map((items, index) => (
-                    <img src={items} alt="skillslogo"></img>
-                ))}
+                <div className='logo-grid'>
+                    {skillsLogos.map((items, index) => (
+                            <div className='logo-item'>
+                                <img className="logo-image" src={items} alt="skillslogo"></img>
+                            </div>
+                        
+                    ))}
+                </div>
             </div>)
         )}
     </div>

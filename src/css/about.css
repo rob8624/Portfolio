@@ -31,3 +31,23 @@
 
 
 
+.logo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    
+
+    
+}
+
+.logo-item {
+    max-width: 150px; /* Set a fixed width for each grid item */
+    height: 100px; /* Set a fixed height for each grid item (optional) */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 100%;
+}
