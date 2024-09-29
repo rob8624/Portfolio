@@ -11,6 +11,11 @@ export const fetchHeroData = async () => {
     return data 
 }
 
+export const fetchSocialsData = async () => {
+    const data = await pb.collection('Socials').getList();
+    return data
+}
+
 export default pb;
 
 
