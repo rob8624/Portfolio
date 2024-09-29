@@ -16,6 +16,16 @@ export const fetchSocialsData = async () => {
     return data
 }
 
+export const fetchAboutData = async () => {
+    const data = await pb.collection('about_details').getList();
+    return data
+}
+
+export const fetchSkillsLogos = async () => {
+    const data = await pb.collection('skills_logos').getList();
+    return data
+}
+
 export default pb;
 
 

@@ -1,0 +1,33 @@
+.flex-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.about-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ }
+
+.about-title,
+.skills-title {
+    font-size: clamp(1.5rem, 2vw, 8rem);
+    font-family: var(--about-title-font);
+    color:black;
+    
+}
+
+.about-text {
+    text-align: center;
+    font-family: var(--about-text-font);
+}
+
+
+

@@ -1,7 +1,11 @@
+
+
+
 .hero-flex {
     display: flex;
     padding: 5% 20% 5% 20%;
-    
+    background-color: azure;
+    border-bottom: 1px solid;
 }
 
 .line {
@@ -18,7 +22,14 @@
 
 .hero-message{
     align-self:flex-end;
-    font-family: var(--hero-title-font);
+    
+}
+
+.hero-message-text {
+    font-family: var(--hero-message-font);
+    font-size: clamp(0.8rem, 1vw, 5rem);
+    color: rgb(117, 13, 13);
+
 }
 
 .socials-flex {
@@ -60,9 +71,6 @@
 }
     
     
-
-
-
 @media screen and (max-width: 1363px) {
 
     .hero-flex {
@@ -86,6 +94,7 @@
     }
     .hero-message {
         text-align: center;
+        
     }
 
     .socials-flex {
@@ -99,5 +108,4 @@
     .hero-flex {
         padding: 5% 5% 5% 5%;
     }
-    
 }

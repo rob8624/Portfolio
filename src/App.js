@@ -1,16 +1,19 @@
 
 import './App.css';
 import pb from './services/pocketbase';
-import { fetchHeaderData, fetchHeroData, fetchSocialsData } from './services/pocketbase';
+import { fetchHeaderData, fetchHeroData, fetchSocialsData, fetchAboutData, fetchSkillsLogos } from './services/pocketbase';
 import React, { useState, useEffect } from 'react';
 import Header from './components/header.js';
 import Hero from './components/hero.js';
+import About from './components/about.js';
 
 
 function App() {
   const [headerData, setHeaderData] = useState([])
   const [heroData, setHeroData] = useState([])
   const [socialsData, setSocialsData] = useState([])
+  const [aboutData, setAboutData] = useState([])
+  const [skillsLogos, setSkillsLogos] = useState([])
 
 useEffect(() => {
   const authenticateUser = async () => {
@@ -23,9 +26,14 @@ useEffect(() => {
     const headerData = await fetchHeaderData();
     const heroData = await fetchHeroData();
     const socialsData = await fetchSocialsData()
+    const aboutData = await fetchAboutData()
+    const skillsLogos = await fetchSkillsLogos()
+    console.log(skillsLogos)
     setHeaderData(headerData.items);
     setHeroData(heroData.items);
     setSocialsData(socialsData.items)
+    setAboutData(aboutData.items)
+    setSkillsLogos(skillsLogos.items[0].field)
 
 }
    catch(error){
@@ -39,7 +47,8 @@ return (
   <>
   <div>
     <Header headerData={headerData} />
-    <Hero heroData={heroData} socialsData={socialsData} />
+    <Hero heroData={heroData} socialsData={socialsData}/>
+    <About aboutData={aboutData} skillsLogos={skillsLogos} />
   </div>
    
    </>

@@ -15,20 +15,21 @@ export default function Hero({ heroData, socialsData }) {
                         <div className='socials-flex'>
                             <div>
                                 <button className='socials-item hero-btn'>Projects</button>
-                                <i class="fa-solid fa-arrow-down socials-arrow"></i>
+                                <i className="fa-solid fa-arrow-down socials-arrow"></i>
                             </div>
                             
                                 { socialsData.map((items, index) => (
                                 <div className='socials-icons' key={items.id}>
-                                    <i className="fa-brands fa-facebook fa-1x click" onClick={() => window.open(items.Facebook)}></i>
-                                    <i className="fa-brands fa-twitter fa-1x"></i>
-                                    <i className="fa-brands fa-instagram fa-1x"></i>
-                                    <i className="fa-brands fa-linkedin fa-1x"></i>
+                                    <i className="fa-brands fa-facebook fa-2x click" onClick={() => window.open(items.Facebook)}></i>
+                                    <i className="fa-brands fa-twitter fa-2x"></i>
+                                    <i className="fa-brands fa-instagram fa-2x"></i>
+                                    <i className="fa-brands fa-linkedin fa-2x"></i>
+                                    <i className="fa-brands fa-github fa-2x"></i>
                                 </div>
                                     ))}
                             
                         </div>
-                        <div>{items.message}</div>
+                        <div className='hero-message-text'>{items.message}</div>
                     </div>
                 </div>
             ))}
