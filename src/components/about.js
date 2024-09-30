@@ -27,10 +27,9 @@ const handleSkillsClick = () => {
                     <div className='about-title' onClick={handleAboutClick}>About</div>
                     <i className="fa-regular fa-address-card centre-icon"></i>
                 </div>
-               <div dangerouslySetInnerHTML={{ __html: items.About }} className='about-text'
-               style={{display: activeIndex === 1 ? "block": "none"}}></div>
+               <div dangerouslySetInnerHTML={{ __html: items.About }} className={`about-text ${activeIndex === 1 ? 'active' : ''}`} ></div>
                 <div className='skills-title' onClick={handleSkillsClick}>Skills</div>
-                <div className='logo-grid' style={{display: activeIndex === 2 ? "grid": "none"}}>
+                <div className={`logo-grid ${activeIndex === 2 ? 'active' : ''}`}>
                     {skillsLogos.map((items, index) => (
                             <div className='logo-item'>
                                 <img className="logo-image" src={items} alt="skillslogo"></img>

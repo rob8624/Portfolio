@@ -18,7 +18,7 @@
 
 .about-title,
 .skills-title {
-    font-size: clamp(1.5rem, 2vw, 8rem);
+    font-size: clamp(1.5rem, 3vw, 10rem);
     font-family: var(--about-title-font);
     color:black;
     
@@ -27,27 +27,34 @@
 .about-text {
     text-align: center;
     font-family: var(--about-text-font);
+    opacity: 0;
+    max-height: 0; /* Initially collapsed */
+    transition: opacity 1s ease, max-height 1s ease;
+    overflow: hidden; /* Hide overflow */
 }
-
-
 
 .logo-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2px;
-    
-
-    
+    opacity: 0;
+    max-height: 0; /* Initially collapsed */
+    transition: opacity 1s ease, max-height 1s ease;
+    overflow: hidden; /* Hide overflow */
+    width: 400px;
 }
 
-.logo-item {
-    max-width: 150px; /* Set a fixed width for each grid item */
-    height: 100px; /* Set a fixed height for each grid item (optional) */
-    overflow: hidden; /* Hide any overflow */
-    display: flex;
-    align-items: center;
+
+.about-text.active {
+    opacity: 1;
+    max-height: 500px; /* Set this to a value greater than the content's height */
 }
 
+.logo-grid.active {
+    opacity: 1;
+    max-height: 500px; /* Set this to a value greater than the content's height */
+}
+   
 .logo-image {
     width: 100%;
 }
