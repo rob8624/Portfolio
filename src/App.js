@@ -15,6 +15,12 @@ function App() {
   const [aboutData, setAboutData] = useState([])
   const [skillsLogos, setSkillsLogos] = useState([])
 
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  
+
+  
+
 useEffect(() => {
   const authenticateUser = async () => {
     try{
@@ -42,13 +48,24 @@ useEffect(() => {
   }
 authenticateUser()
 }, [])
+
+
+
+
   
 return (
   <>
   <div>
     <Header headerData={headerData} />
+
     <Hero heroData={heroData} socialsData={socialsData}/>
-    <About aboutData={aboutData} skillsLogos={skillsLogos} />
+
+    <About aboutData={aboutData} 
+    skillsLogos={skillsLogos}
+    activeIndex={activeIndex}
+    setActiveIndex={setActiveIndex}
+    />
+   
   </div>
    
    </>

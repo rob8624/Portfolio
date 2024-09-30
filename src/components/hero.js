@@ -1,15 +1,17 @@
 import React from 'react'
 import '../css/hero.css';
 
-export default function Hero({ heroData, socialsData }) {
+export default function Hero({ heroData, socialsData,}) {
+    
     
     return (
         <div>
-            {console.log(heroData)}
-            {console.log(socialsData)}
+            
+               
+            
             {heroData.map((items, index) => (
                 <div key={items.id} id="flex-wrapper" className='hero-flex'>
-                    <div className='hero-title'>{items.title}</div>
+                    <div className='hero-title' >{items.title}</div>
                     <div className="line"></div>
                     <div className='hero-message'>
                         <div className='socials-flex'>
