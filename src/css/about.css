@@ -1,6 +1,9 @@
 .flex-wrapper{
     display: flex;
     justify-content: center;
+    overflow-wrap: normal;
+    width: 100%;
+    
 }
 
 .about-wrapper {
@@ -8,13 +11,16 @@
     flex-direction: column;
     margin-top: 2%;
     align-items: center;
-}
+    width: 100%;
+    
+    
+    }
 
 .about-content {
     display: flex;
     flex-direction: column;
     align-items: center;
- }
+}
 
 .about-title,
 .skills-title {
@@ -41,7 +47,7 @@
     max-height: 0; /* Initially collapsed */
     transition: opacity 1s ease, max-height 1s ease;
     overflow: hidden; /* Hide overflow */
-    width: 400px;
+    max-width: 400px;
 }
 
 
@@ -53,8 +59,10 @@
 .logo-grid.active {
     opacity: 1;
     max-height: 500px; /* Set this to a value greater than the content's height */
+   
 }
    
 .logo-image {
     width: 100%;
+    
 }
