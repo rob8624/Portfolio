@@ -33,7 +33,8 @@ const handleSkillsClick = () => {
                 <div className={`logo-grid ${activeIndex === 2 ? 'active' : ''}`}>
                     {skillsLogos.map((items, index) => (
                             <div className='logo-item'>
-                                <img className="logo-image" src={items} alt="skillslogo"></img>
+                                <div className='logo-title'>{items.title}</div>
+                                <img className="logo-image" src={items.url} alt="skillslogo"></img>
                             </div>
                     ))}
                 </div> 

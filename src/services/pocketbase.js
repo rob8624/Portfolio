@@ -22,24 +22,39 @@ export const fetchAboutData = async () => {
 }
 
 export const fetchSkillsLogos = async () => {
-    try {
+   
         const data = await pb.collection('skills_logos').getList();
         
-        // Assuming 'field' contains the array of logos
-        const images = data.items[0].field; // Adjust this if needed
-
-        // Generate URLs for each logo
-        const logoUrls = images.map((filename) => 
-            pb.files.getUrl(data.items[0], filename) // Use the correct record and filename
-        );
-
-        console.log('Logo URLs:', logoUrls);
-        return logoUrls; // Return the array of URLs
-    } catch (error) {
-        console.error('Error fetching skills logos:', error);
-    }
+        const images = data.items.map((item) => (
+            {
+                url: pb.files.getUrl(item, item.field),
+                title: item.name
+            }));
+        
+        console.log(images)
+        return images
 }
 
 export default pb;
+
+
+// export const fetchSkillsLogos = async () => {
+//     try {
+//         const data = await pb.collection('skills_logos').getList();
+        
+//         // Assuming 'field' contains the array of logos
+//         const images = data.items[0].field; // Adjust this if needed
+
+//         // Generate URLs for each logo
+//         const logoUrls = images.map((filename) => 
+//             pb.files.getUrl(data.items[0], filename) // Use the correct record and filename
+//         );
+
+//         console.log('Logo URLs:', logoUrls);
+//         return logoUrls; // Return the array of URLs
+//     } catch (error) {
+//         console.error('Error fetching skills logos:', error);
+//     }
+// }
 
 

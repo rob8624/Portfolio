@@ -39,6 +39,7 @@ useEffect(() => {
     setHeroData(heroData.items);
     setSocialsData(socialsData.items)
     setAboutData(aboutData.items)
+    console.log('skillslog', skillsLogos)
     setSkillsLogos(skillsLogos)
 
 }
@@ -57,10 +58,8 @@ return (
   <>
   <div>
     <Header headerData={headerData} />
-
-    <Hero heroData={heroData} socialsData={socialsData}/>
-
-    <About aboutData={aboutData} 
+   <Hero heroData={heroData} socialsData={socialsData}/>
+   <About aboutData={aboutData} 
     skillsLogos={skillsLogos}
     activeIndex={activeIndex}
     setActiveIndex={setActiveIndex}
