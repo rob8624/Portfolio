@@ -1,0 +1,13 @@
+.projects-flex-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    padding-top: 5rem;
+}
+
+.projects-title {
+    font-size: clamp(4rem, 8vw, 10rem);/* Adjust as needed */
+    font-family: var(--projects-title-font);
+    color: var(--projects-title-color);
+}

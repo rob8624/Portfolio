@@ -6,6 +6,7 @@ import React, { useState, useEffect } from 'react';
 import Header from './components/header.js';
 import Hero from './components/hero.js';
 import About from './components/about.js';
+import Projects from './components/projects.js';
 
 
 function App() {
@@ -14,7 +15,6 @@ function App() {
   const [socialsData, setSocialsData] = useState([])
   const [aboutData, setAboutData] = useState([])
   const [skillsLogos, setSkillsLogos] = useState([])
-
   const [activeIndex, setActiveIndex] = useState(0);
 
   
@@ -57,14 +57,14 @@ authenticateUser()
 return (
   <>
   <div>
-    <Header headerData={headerData} />
-   <Hero heroData={heroData} socialsData={socialsData}/>
+    <Header headerData={headerData} activeIndex={activeIndex} />
+   <Hero heroData={heroData} socialsData={socialsData} activeIndex={activeIndex}/>
    <About aboutData={aboutData} 
     skillsLogos={skillsLogos}
     activeIndex={activeIndex}
     setActiveIndex={setActiveIndex}
     />
-   
+   <Projects/>
   </div>
    
    </>

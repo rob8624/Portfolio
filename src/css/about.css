@@ -23,19 +23,15 @@
 }
 
 .about-title,
-.skills-title {
+.skills-title,
+.projects-title {
     font-size: clamp(1.5rem, 3vw, 10rem);
     font-family: var(--about-title-font);
     color:black;
     transition: 1s ease;
-   
-}
-
-.about-title:hover, .skills-title:hover {
-    font-size: 5rem;
-    color: #cbf2f1;
     cursor: pointer;
 }
+
 
 
 .about-text {
@@ -89,3 +85,10 @@
 }
 
 
+@media screen and (max-width: 500px) {
+    .about-title, .skills-title {
+        font-size: 60px; /* Reset to original size */
+        color: black; /* Reset to original color */
+        
+    }
+}

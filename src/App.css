@@ -9,18 +9,26 @@
 /* Varibles */
 :root {
     /* fonts */
-    --header-logo-font: 'Mukta', sans-serif;
+    --header-logo-font: "Luckiest Guy", cursive;
     --header-logo-subtitle-font: "Julius Sans One", sans-serif;
     --header-message-font: "Lexend", sans-serif;
     
-    --hero-title-font: "ABeeZee", sans-serif;
+    --hero-title-font: "Righteous", sans-serif;
     --hero-message-font: "ABeeZee", sans-serif;
 
     --about-title-font:"ABeeZee", sans-serif;
     --about-text-font: "Raleway", sans-serif;
 
+    --projects-title-font:"Bebas Neue", sans-serif;
+
     /* color */
-    --header-bg-color: #cbf2f1;
+    --header-title-color: HSL(283, 78%, 44%);
+    --header-bg-color: white;
+    --hero-bg-color: linear-gradient(to bottom, white, HSL(283, 30%, 84%));
+    --hero-title-color: black;
+    --hero-message-color: black;
+
+    --projects-title-color: HSL(283, 78%, 44%);
 }
 
 

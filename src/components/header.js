@@ -2,7 +2,7 @@ import React from 'react'
 import '../css/header.css';
 
 
-export default function Header({ headerData }) {
+export default function Header({ headerData, activeIndex }) {
     return (
     <div>
         {headerData.map((items, index) => (

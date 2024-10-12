@@ -1,7 +1,7 @@
 import React from 'react'
 import '../css/hero.css';
 
-export default function Hero({ heroData, socialsData,}) {
+export default function Hero({ heroData, socialsData, activeIndex}) {
     
     
     return (
@@ -10,7 +10,7 @@ export default function Hero({ heroData, socialsData,}) {
                
             
             {heroData.map((items, index) => (
-                <div key={items.id} id="flex-wrapper" className='hero-flex'>
+                <div key={items.id} id='flex-wrapper' className={`hero-flex  ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                     <div className='hero-title' >{items.title}</div>
                     <div className="line"></div>
                     <div className='hero-message'>

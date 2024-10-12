@@ -4,12 +4,23 @@
 .hero-flex {
     display: flex;
     padding: 5% 20% 5% 20%;
-    background-color: azure;
+    background: var(--hero-bg-color);
     border-bottom: 1px solid;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
+    transition: max-height 2s ease, opacity 2s ease; /* Smooth transition */
+    max-height: 1000px; /* Set a max height larger than the content */
+    opacity: 1; /* Ensure it starts fully visible */
 }
 
+.hero-flex.collapse {
+    max-height: 0; /* Collapse to 0 */
+    opacity: 0; /* Fade out */
+}
+
+
+
 .line {
-    border-left: 2px solid black;
+    border-left: 1px solid black;
     height: auto; /* Height for the vertical line */
     margin:0px 100px 0px 100px;
 }
@@ -18,6 +29,7 @@
     font-size: clamp(1rem, 6vw, 30rem);
     flex-shrink: 1;
     font-family: var(--hero-title-font);
+    color: var(--hero-title-color);
    }
 
 .hero-message{
@@ -27,7 +39,7 @@
 .hero-message-text {
     font-family: var(--hero-message-font);
     font-size: clamp(0.8rem, 1vw, 5rem);
-    color: rgb(117, 13, 13);
+    color: var(--hero-message-color);
 
 }
 
@@ -84,7 +96,7 @@
 
    .line {
         border-left: none; /* Remove the vertical line */
-        border-top: 2px solid black; /* Add the horizontal line */
+        border-top: 1px solid GREY; /* Add the horizontal line */
         width: 100%; /* Width for the horizontal line */
         height: 1px; /* Set height to 0 */
     }

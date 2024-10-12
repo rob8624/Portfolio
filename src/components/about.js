@@ -37,7 +37,8 @@ const handleSkillsClick = () => {
                                 <img className="logo-image" src={items.url} alt="skillslogo"></img>
                             </div>
                     ))}
-                </div> 
+                </div>
+                
             </div>)
         )}
     </div>

@@ -4,7 +4,9 @@
     height: fit-content;
     background-color: white;
     align-items: center;
-    background-color: var(--header-bg-color)
+    background-color: var(--header-bg-color);
+
+    
 }
 
 
@@ -21,6 +23,7 @@
 .title-text {
     font-size: clamp(2rem, 5vw, 3rem);
     font-family: var(--header-logo-font); 
+    color: var(--header-title-color);
 }
 
 .subtitle-text {
