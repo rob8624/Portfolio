@@ -22,11 +22,11 @@ export default function Hero({ heroData, socialsData,}) {
                             
                                 { socialsData.map((items, index) => (
                                 <div className='socials-icons' key={items.id}>
-                                    <i className="fa-brands fa-facebook fa-2x click" onClick={() => window.open(items.Facebook)}></i>
-                                    <i className="fa-brands fa-twitter fa-2x"></i>
-                                    <i className="fa-brands fa-instagram fa-2x"></i>
-                                    <i className="fa-brands fa-linkedin fa-2x"></i>
-                                    <i className="fa-brands fa-github fa-2x"></i>
+                                    <i className="fa-brands fa-facebook social-icon click" onClick={() => window.open(items.Facebook)}></i>
+                                    <i className="fa-brands fa-twitter social-icon"></i>
+                                    <i className="fa-brands fa-instagram social-icon"></i>
+                                    <i className="fa-brands fa-linkedin social-icon "></i>
+                                    <i className="fa-brands fa-github social-icon"></i>
                                 </div>
                                     ))}
                             
