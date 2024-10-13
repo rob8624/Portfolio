@@ -1,0 +1,15 @@
+.loading {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transition: opacity ease 1s;
+    font-size: clamp(4rem, 6vw, 10rem);
+    color: purple;
+    
+}
+
+.loading.complete {
+    opacity: 0.4; /* Fade out effect */
+
+}

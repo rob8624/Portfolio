@@ -33,6 +33,7 @@
     flex-shrink: 1;
     font-family: var(--hero-title-font);
     color: var(--hero-title-color);
+   
    }
 
 .hero-message{

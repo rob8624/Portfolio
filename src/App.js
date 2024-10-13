@@ -7,6 +7,8 @@ import Header from './components/header.js';
 import Hero from './components/hero.js';
 import About from './components/about.js';
 import Projects from './components/projects.js';
+import Loading from './components/loading.js';
+
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
   const [aboutData, setAboutData] = useState([])
   const [skillsLogos, setSkillsLogos] = useState([])
   const [activeIndex, setActiveIndex] = useState(0);
+  const [loading, setLoading] = useState(true)
+  const [progress, setProgress] = useState(0)
 
   
 
@@ -28,20 +32,30 @@ useEffect(() => {
         process.env.REACT_APP_POCKETBASE_USERNAME, 
         process.env.REACT_APP_POCKETBASE_PASSWORD  
     );
+    setProgress(10)
     console.log('Authentication successful:', authData);
+    
     const headerData = await fetchHeaderData();
-    const heroData = await fetchHeroData();
-    const socialsData = await fetchSocialsData()
-    const aboutData = await fetchAboutData()
-    const skillsLogos = await fetchSkillsLogos()
-    console.log(skillsLogos)
     setHeaderData(headerData.items);
-    setHeroData(heroData.items);
-    setSocialsData(socialsData.items)
-    setAboutData(aboutData.items)
-    console.log('skillslog', skillsLogos)
-    setSkillsLogos(skillsLogos)
+    setProgress(20)
 
+    const heroData = await fetchHeroData();
+    setHeroData(heroData.items);
+    setProgress(40)
+
+    const socialsData = await fetchSocialsData()
+    setSocialsData(socialsData.items)
+    setProgress(60)
+
+    const aboutData = await fetchAboutData()
+    setAboutData(aboutData.items)
+    setProgress(80)
+    
+    const skillsLogos = await fetchSkillsLogos()
+    setSkillsLogos(skillsLogos)
+    setProgress(100)
+   
+    setLoading(false)
 }
    catch(error){
     console.error('Error during authentication:', error);
@@ -56,6 +70,7 @@ authenticateUser()
   
 return (
   <>
+  { loading ? <Loading progress={progress}/> :
   <div>
     <Header headerData={headerData} activeIndex={activeIndex} />
    <Hero heroData={heroData} socialsData={socialsData} activeIndex={activeIndex}/>
@@ -66,7 +81,7 @@ return (
     />
    <Projects/>
   </div>
-   
+}
    </>
   );
 
