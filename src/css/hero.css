@@ -4,10 +4,13 @@
 .hero-flex {
     display: flex;
     padding: 5% 20% 5% 20%;
-    background: var(--hero-bg-color);
+    background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)),
+    url('https://media.istockphoto.com/id/1085940992/vector/binary-matrix-code-computer-data-stream-digital-security-codes-and-gray-coding-information.jpg?s=612x612&w=0&k=20&c=Vdg9ICIDQPPAem9ZMJcvK-pIaaoYtxa1Kwv_KA0AWQc=');
+    
     border-bottom: 1px solid;
     box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
-    transition: max-height 2s ease, opacity 2s ease; /* Smooth transition */
+    transition: max-height 2s ease, opacity 0.8s ease; /* Smooth transition */
     max-height: 1000px; /* Set a max height larger than the content */
     opacity: 1; /* Ensure it starts fully visible */
 }
@@ -34,6 +37,12 @@
 
 .hero-message{
     align-self:flex-end;
+    max-height: 1000px;
+    transition: max-height 2s ease, opacity 0.1s ease; /* Smooth transition */
+}
+
+.hero-message.collapse {
+    max-height: 0;
 }
 
 .hero-message-text {
@@ -46,6 +55,13 @@
 .socials-flex {
     display: flex;
     margin-bottom: 5%;
+    max-height: 1000px;
+    transition: max-height 2s ease, opacity 0.1s ease; 
+}
+
+.socials-flex.collapse {
+    max-height: 0;
+    pointer-events: none;
 }
 
 .socials-item {

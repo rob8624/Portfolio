@@ -13,8 +13,8 @@ export default function Hero({ heroData, socialsData, activeIndex}) {
                 <div key={items.id} id='flex-wrapper' className={`hero-flex  ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                     <div className='hero-title' >{items.title}</div>
                     <div className="line"></div>
-                    <div className='hero-message'>
-                        <div className='socials-flex'>
+                    <div className={`hero-message ${activeIndex !== 0 ? 'collapse' : ' '}`}>
+                        <div className={`socials-flex  ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                             <div>
                                 <button className='socials-item hero-btn'>Projects</button>
                                 <i className="fa-solid fa-arrow-down socials-arrow"></i>

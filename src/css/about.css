@@ -3,6 +3,9 @@
     justify-content: center;
     overflow-wrap: normal;
     width: 100%;
+    background-image: 
+    linear-gradient(to top, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.5)),
+    url('https://media.istockphoto.com/id/1085940992/vector/binary-matrix-code-computer-data-stream-digital-security-codes-and-gray-coding-information.jpg?s=612x612&w=0&k=20&c=Vdg9ICIDQPPAem9ZMJcvK-pIaaoYtxa1Kwv_KA0AWQc=');
     
 }
 
@@ -25,9 +28,9 @@
 .about-title,
 .skills-title,
 .projects-title {
-    font-size: clamp(1.5rem, 3vw, 10rem);
+    font-size: clamp(1rem, 4vw, 10rem);
     font-family: var(--about-title-font);
-    color:black;
+    color:purple;
     transition: 1s ease;
     cursor: pointer;
 }
@@ -87,7 +90,7 @@
 
 @media screen and (max-width: 500px) {
     .about-title, .skills-title {
-        font-size: 60px; /* Reset to original size */
+        font-size: 40px; /* Reset to original size */
         color: black; /* Reset to original color */
         
     }
