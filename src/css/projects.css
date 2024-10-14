@@ -11,3 +11,33 @@
     font-family: var(--projects-title-font);
     color: var(--projects-title-color);
 }
+
+.projects-items-flex {
+    display: flex;
+    justify-content: center;
+    
+    padding: 0% 20% 10% 20%;
+}
+
+.projects-image {
+    width: 30%;
+}
+
+.projects-description {
+    font-family: var(--projects-description-font);
+   
+}
+
+@media screen and (max-width: 917px) {
+    .projects-items-flex {
+        flex-direction: column; 
+        align-items: center;           /* Center items horizontally */
+        justify-content: center;  
+    }
+
+    .projects-image {
+        width: 100%;
+    }
+
+   
+}

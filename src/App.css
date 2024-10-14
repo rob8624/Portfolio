@@ -21,6 +21,8 @@
 
     --projects-title-font:"Bebas Neue", sans-serif;
 
+    --projects-description-font:"Raleway", sans-serif;
+
     /* color */
     --header-title-color: HSL(283, 78%, 44%);
     --header-bg-color: white;

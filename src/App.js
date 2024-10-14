@@ -1,7 +1,9 @@
 
 import './App.css';
 import pb from './services/pocketbase';
-import { fetchHeaderData, fetchHeroData, fetchSocialsData, fetchAboutData, fetchSkillsLogos } from './services/pocketbase';
+import { fetchHeaderData, fetchHeroData, 
+  fetchSocialsData, fetchAboutData, 
+  fetchSkillsLogos, fetchProjects } from './services/pocketbase';
 import React, { useState, useEffect, useRef } from 'react';
 import Header from './components/header.js';
 import Hero from './components/hero.js';
@@ -17,6 +19,7 @@ function App() {
   const [socialsData, setSocialsData] = useState([])
   const [aboutData, setAboutData] = useState([])
   const [skillsLogos, setSkillsLogos] = useState([])
+  const [projectsData, setProjects] = useState([])
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
@@ -45,6 +48,7 @@ function App() {
           setSocialsData(cachedData.socialsData || []);
           setAboutData(cachedData.aboutData || []);
           setSkillsLogos(cachedData.skillsLogos || []);
+          setProjects(cachedData.projectsData)
           setLoading(false);
           return; // Skip fetching new data
         }
@@ -59,7 +63,7 @@ function App() {
 
         const heroData = await fetchHeroData();
         setHeroData(heroData.items);
-        data.current.heroData = heroData.items; // Fix capitalization here
+        data.current.heroData = heroData.items; 
         setProgress(40);
 
         const socialsData = await fetchSocialsData();
@@ -75,6 +79,11 @@ function App() {
         const skillsLogos = await fetchSkillsLogos();
         setSkillsLogos(skillsLogos);
         data.current.skillsLogos = skillsLogos;
+        setProgress(90);
+
+        const projectsData = await fetchProjects();
+        setProjects(projectsData)
+        data.current.projectsData = projectsData;
         setProgress(100);
        
         setLoading(false);
@@ -104,7 +113,7 @@ return (
     activeIndex={activeIndex}
     setActiveIndex={setActiveIndex}
     />
-   <Projects/>
+   <Projects projectsData={projectsData}/>
   </div> 
 }
    </>

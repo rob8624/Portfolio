@@ -31,9 +31,35 @@ export const fetchSkillsLogos = async () => {
                 title: item.name
             }));
         
-        console.log(images)
         return images
 }
+
+export const fetchProjects = async () => {
+    try {
+        
+        const data = await pb.collection('projects').getList();
+        
+        
+        const projectsWithImages = data.items.map(project => {
+            return {
+                ...project,
+                imageUrl: pb.files.getUrl(project, project.image) 
+            };
+        });
+         
+        return projectsWithImages; 
+
+    } catch (error) {
+        console.error('Error fetching projects:', error);
+        throw error; // Handle the error as needed
+    }
+
+   
+};
+
+fetchProjects()
+
+
 
 export default pb;
 
