@@ -13,7 +13,11 @@ const handleAboutClick = () => {
 const handleSkillsClick = () => {
     setActiveIndex((prevState) => (prevState !== 2 ? 2 : 0))
  }
- 
+
+const renderIcon = (index) => {
+  return activeIndex === index ? <i class="fa-regular fa-folder-open"></i> :
+  <i class="fa-regular fa-folder-closed"></i>
+} 
    
 
   return(
@@ -25,12 +29,12 @@ const handleSkillsClick = () => {
             <div className='about-wrapper' key={items.id}>
                 <div className='about-content'>
                     <div className='about-title' onClick={handleAboutClick}>About</div>
-                    {activeIndex === 1 ? <i class="fa-regular fa-folder-open"></i> : <i class="fa-regular fa-folder-closed"></i> }
+                    { renderIcon(1) }
                 </div>
                <div dangerouslySetInnerHTML={{ __html: items.About }} className={`about-text ${activeIndex === 1 ? 'active' : ''}`} ></div>
                 <div className='skills-title' onClick={handleSkillsClick}>Skills</div>
                 {console.log('index', activeIndex)}
-                {activeIndex === 2 ? <i class="fa-regular fa-folder-open"></i>: <i class="fa-regular fa-folder-closed"></i> }
+                { renderIcon(2) }
                 <div className={`logo-grid ${activeIndex === 2 ? 'active' : ''}`}>
                     {skillsLogos.map((items, index) => (
                             <div className='logo-item'>
