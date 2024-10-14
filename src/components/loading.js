@@ -2,7 +2,7 @@
 import '../css/loading.css';
 import React, { useState, useEffect } from 'react';
 
-export default function Loading({ progress }) {
+export default function Loading({ progress, cachedData }) {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   useEffect(() => {
@@ -10,10 +10,11 @@ export default function Loading({ progress }) {
       setLoadingComplete(true);
     }
   }, [progress]);
-
+  console.log('prog', progress)
   return (
     <div className={`loading ${loadingComplete ? 'complete' : ''}`}>
-      <h1>{progress}%</h1>
+      { progress === 0 ? ' ' : <h1>{progress}%</h1>}
+      
     </div>
   );
 }
