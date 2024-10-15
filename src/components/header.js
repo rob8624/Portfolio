@@ -6,12 +6,14 @@ import { throttle } from 'lodash';
 
 export default function Header({ headerData, activeIndex }) {
     const [opacity, setOpacity] = useState(1)
+    
 
     
     const handleScroll = throttle(() => {
         const scrollPosition = window.scrollY;
         const newOpacity = Math.max(1 - scrollPosition / 300, 0.2);
         setOpacity(newOpacity);
+        
 })
     
     useEffect(() => {
@@ -21,6 +23,8 @@ export default function Header({ headerData, activeIndex }) {
         };
     }) 
     
+
+
     
     
     
