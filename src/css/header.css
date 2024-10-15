@@ -11,7 +11,7 @@
 .header-flex {
     display: flex;
     justify-content: space-between;
-    height: fit-content;
+    height: 80px;
     background-color: white;
     align-items: center;
     background-color: var(--header-bg-color);
