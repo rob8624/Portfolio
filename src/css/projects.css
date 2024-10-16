@@ -5,13 +5,14 @@
     justify-content: center; 
     padding-top: 5rem;
     margin: auto;
-    max-width: 60%;
+    width : 60%
 }
 
-.projects-title {
-    font-size: clamp(4rem, 8vw, 10rem);/* Adjust as needed */
+.main-projects-title {
+    font-size: clamp(6rem, 7vw, 10rem);/* Adjust as needed */
     font-family: var(--projects-title-font);
     color: var(--projects-title-color);
+    padding-bottom: 10%;
 }
 
 .projects-items-flex {
@@ -19,6 +20,7 @@
     justify-content: center;
     padding-bottom:  100px;
     gap:2px;
+    position: relative;
 }
 
 .description-flex {
@@ -26,37 +28,56 @@
     flex-direction: column;
     justify-content: space-evenly;
     
-    
+   
+    background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.6)),
+    url('https://media.istockphoto.com/id/1085940992/vector/binary-matrix-code-computer-data-stream-digital-security-codes-and-gray-coding-information.jpg?s=612x612&w=0&k=20&c=Vdg9ICIDQPPAem9ZMJcvK-pIaaoYtxa1Kwv_KA0AWQc=');
+}
+
+.projects-title {
+    font-size: clamp(2rem, 2vw, 4rem);
+    color: black;
 }
 
 .projects-image {
-    width: 20%;
+    
+    
     border-radius: 3%;
+    object-fit: cover;
+    width: 20px;
+    max-height: 200px;
+    border-radius: 10%;
+    
+   
+    
+    
 }
 
 .projects-description {
     font-family: var(--projects-description-font);
-    
+    padding: 20px;
 }
 
 @media screen and (max-width: 917px) {
     .projects-flex-wrapper {
-        max-width: 90%;
+       width: 90%;
     }
     
     
     .projects-items-flex {
-        flex-direction: column; 
-        align-items: center;           /* Center items horizontally */
-        justify-content: center;  
+        height: 100%;
     }
 
     .description-flex {
         gap:20px;
     }
 
+    .projects-description {
+        padding: 10px;
+    }
+
     .projects-image {
-        width: 100%;
+       display: none;
     }
 
    
