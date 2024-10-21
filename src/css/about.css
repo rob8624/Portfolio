@@ -28,7 +28,7 @@
 .about-title,
 .skills-title,
 .projects-title {
-    font-size: clamp(1rem, 4vw, 10rem);
+    font-size: clamp(3rem, 3vw, 8rem);
     font-family: var(--about-title-font);
     color:purple;
     transition: 1s ease;

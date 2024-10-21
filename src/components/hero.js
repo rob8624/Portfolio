@@ -1,7 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../css/hero.css';
 
 export default function Hero({ heroData, socialsData, activeIndex}) {
+     
+    
+    
     
     
     return (
