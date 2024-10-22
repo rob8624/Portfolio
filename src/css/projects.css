@@ -13,7 +13,10 @@
     font-family: var(--projects-title-font);
     color: var(--projects-title-color);
     padding-bottom: 10%;
+   
 }
+
+
 
 .projects-items-flex {
     display: flex;
@@ -39,18 +42,13 @@
     color: black;
 }
 
+
 .projects-image {
-    
-    
     border-radius: 3%;
     object-fit: cover;
     width: 20px;
     max-height: 200px;
     border-radius: 10%;
-    
-   
-    
-    
 }
 
 .projects-description {
