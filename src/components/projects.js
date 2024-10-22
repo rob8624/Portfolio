@@ -31,7 +31,7 @@ useGSAP(() => {
             
             gsap.fromTo(
                 ".title-slide",
-                { x: '-25vw', opacity: 0.1 },
+                { x: small ? '-40vw' :'-25vw', opacity: 0.1 },
                 {
                     x: 0,
                     opacity: 1,
@@ -50,16 +50,18 @@ useGSAP(() => {
 
             gsap.fromTo(
                 ".fade",
-                { opacity: 0.5 },
+                { opacity: 0.3, x: small ? -20 : -100 },
                 {
+                    x:0,
                     opacity: 1,
-                    duration: 0.6, // Total duration for the fade-in
+                    duration: 1,
+                  
                     stagger: {
-                    amount: 0.8, // Total time for the stagger effect
-                    from: "start", // Start stagger from the first element
+                    amount: 0.3, 
+                    from: "start",
                     },
                     scrollTrigger: {
-                        trigger: ".projects-title", // Use the container as the trigger
+                        trigger: ".projects-title", 
                         start: "top 70%",
                         end: "top 15%",
                         toggleActions: "play none none reverse",
