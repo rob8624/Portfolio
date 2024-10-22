@@ -16,7 +16,7 @@ const handleSkillsClick = () => {
 
 const renderIcon = (index) => {
   return activeIndex === index ? <i class="fa-regular fa-folder-open"></i> :
-  <i class="fa-regular fa-folder-closed"></i>
+  <i className="fa-regular fa-folder-closed"></i>
 } 
    
 
