@@ -40,6 +40,10 @@ export default function BackToTop() {
 
     
     return (
-        <button id="backToTop" className='btn-container'>Scroll to top</button>
+        
+        
+        <button id="backToTop" className='back-top-btn'>
+        <i class="fa-regular fa-circle-up"></i> Scroll to top</button>
+        
     )
 }

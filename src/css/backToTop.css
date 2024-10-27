@@ -1,12 +1,25 @@
-.btn-container {
+
+.fa-regular {
+    padding-right: 2px;
+}
+
+.back-top-btn {
     position: fixed;
     bottom: 0%;
     visibility: hidden;
     opacity: 0;
     transition: opacity 0.4s ease-in, visibility 0.4s ease-in; 
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    cursor: pointer;
+}
+   
+.back-top-btn:hover{
+    background-color: rgb(180, 153, 180);
 }
 
-.btn-container.show {
+.back-top-btn.show {
     visibility: visible;
     opacity: 1;
 }
