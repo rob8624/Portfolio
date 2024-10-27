@@ -12,7 +12,7 @@ gsap.registerPlugin(useGSAP);
 
 
 
-export default function Projects( { projectsData }) {
+export default function Projects( { projectsData, projectsRef}) {
     
 
 const containerRef = useRef()
@@ -77,7 +77,7 @@ return(
     
     <div className='projects-flex-wrapper' ref={containerRef} >
        <div>-----</div>
-        <div className='main-projects-title title-slide'>Projects</div>
+        <div className='main-projects-title title-slide' ref={projectsRef}>Projects</div>
        
             { projectsData.map((items, index) => (
               <div className='projects-items-flex fade' key={items.id}>

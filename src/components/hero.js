@@ -1,10 +1,15 @@
 
 import '../css/hero.css';
 
-export default function Hero({ heroData, socialsData, activeIndex}) {
+
+export default function Hero({ heroData, socialsData, activeIndex, projectsRef}) {
      
-    
-    
+     
+    function handleClick() {
+        if (projectsRef.current){
+            projectsRef.current.scrollIntoView({ behavior: 'smooth' })
+        }
+    }   
     
     
     return (
@@ -19,7 +24,7 @@ export default function Hero({ heroData, socialsData, activeIndex}) {
                     <div className={`hero-message ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                         <div className={`socials-flex  ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                             <div>
-                                <button className='socials-item hero-btn'>Projects</button>
+                                <button className='socials-item hero-btn' onClick={handleClick}>Projects</button>
                                 <i className="fa-solid fa-arrow-down socials-arrow"></i>
                             </div>
                             

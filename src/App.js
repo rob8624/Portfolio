@@ -24,6 +24,8 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
+  const projectsRef = useRef(null)
+
   
   const data = useRef({})
 
@@ -107,13 +109,18 @@ return (
   {  loading ? <Loading progress={progress} cachedData={cachedData}/> :
   <div>
     <Header headerData={headerData} activeIndex={activeIndex} />
-   <Hero heroData={heroData} socialsData={socialsData} activeIndex={activeIndex}/>
+   <Hero heroData={heroData} 
+        socialsData={socialsData} 
+        activeIndex={activeIndex}
+         projectsRef={projectsRef}/>
+
    <About aboutData={aboutData} 
     skillsLogos={skillsLogos}
     activeIndex={activeIndex}
     setActiveIndex={setActiveIndex}
     />
-   <Projects projectsData={projectsData}/>
+   <Projects projectsData={projectsData} 
+            projectsRef={projectsRef}/>
   </div> 
 }
    </>
