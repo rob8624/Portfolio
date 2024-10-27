@@ -10,6 +10,7 @@ import Hero from './components/hero.js';
 import About from './components/about.js';
 import Projects from './components/projects.js';
 import Loading from './components/loading.js';
+import BackToTop from './components/backtotop.js';
 
 
 
@@ -121,6 +122,7 @@ return (
     />
    <Projects projectsData={projectsData} 
             projectsRef={projectsRef}/>
+   <BackToTop />
   </div> 
 }
    </>

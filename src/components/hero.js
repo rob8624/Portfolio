@@ -14,9 +14,6 @@ export default function Hero({ heroData, socialsData, activeIndex, projectsRef})
     
     return (
         <div>
-            
-               
-            
             {heroData.map((items, index) => (
                 <div key={items.id} id='flex-wrapper' className={`hero-flex  ${activeIndex !== 0 ? 'collapse' : ' '}`}>
                     <div className='hero-title' >{items.title}</div>
