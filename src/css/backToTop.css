@@ -1,7 +1,5 @@
 
-.fa-regular {
-    padding-right: 2px;
-}
+
 
 .back-top-btn {
     position: fixed;
@@ -13,13 +11,17 @@
     border-radius: 20px;
     background-color: white;
     cursor: pointer;
+    margin: 10px;
 }
    
-.back-top-btn:hover{
-    background-color: rgb(180, 153, 180);
-}
+
 
 .back-top-btn.show {
     visibility: visible;
     opacity: 1;
+}
+
+.fa-regular {
+    padding-right: 2px;
+   
 }
