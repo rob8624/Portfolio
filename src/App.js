@@ -12,6 +12,9 @@ import Projects from './components/projects.js';
 import Loading from './components/loading.js';
 import BackToTop from './components/backtotop.js';
 
+import { Routes, Route } from 'react-router-dom';
+
+
 
 
 function App() {
@@ -109,19 +112,29 @@ return (
   <>
   {  loading ? <Loading progress={progress} cachedData={cachedData}/> :
   <div>
-    <Header headerData={headerData} activeIndex={activeIndex} />
-   <Hero heroData={heroData} 
-        socialsData={socialsData} 
-        activeIndex={activeIndex}
-         projectsRef={projectsRef}/>
-
-   <About aboutData={aboutData} 
-    skillsLogos={skillsLogos}
-    activeIndex={activeIndex}
-    setActiveIndex={setActiveIndex}
-    />
-   <Projects projectsData={projectsData} 
+   <Header headerData={headerData} activeIndex={activeIndex} />
+   <Routes>
+      <Route path="/" element={
+        <>
+        <Hero heroData={heroData} 
+            socialsData={socialsData} 
+            activeIndex={activeIndex}
             projectsRef={projectsRef}/>
+
+      <About aboutData={aboutData} 
+        skillsLogos={skillsLogos}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}/>
+
+      <Projects projectsData={projectsData} 
+                projectsRef={projectsRef}/>
+      </>
+      }/>
+
+      <Route path="/projects" element={<div>Hello</div>}/>  
+
+    </Routes>
+    
    <BackToTop />
   </div> 
 }
@@ -131,3 +144,30 @@ return (
 }
 
 export default App;
+
+
+/* return (
+  <>
+  {  loading ? <Loading progress={progress} cachedData={cachedData}/> :
+  <div>
+   <Header headerData={headerData} activeIndex={activeIndex} />
+
+      <Hero heroData={heroData} 
+            socialsData={socialsData} 
+            activeIndex={activeIndex}
+            projectsRef={projectsRef}/>
+
+      <About aboutData={aboutData} 
+        skillsLogos={skillsLogos}
+        activeIndex={activeIndex}
+        setActiveIndex={setActiveIndex}
+        />
+      <Projects projectsData={projectsData} 
+                projectsRef={projectsRef}/>
+  
+    
+   <BackToTop />
+  </div> 
+}
+   </>
+  ); */
