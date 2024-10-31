@@ -11,6 +11,7 @@ import About from './components/about.js';
 import Projects from './components/projects.js';
 import Loading from './components/loading.js';
 import BackToTop from './components/backtotop.js';
+import ProjectsDetail from './components/projectsDetail.js';
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -131,7 +132,7 @@ return (
       </>
       }/>
 
-      <Route path="/projects" element={<div>Hello</div>}/>  
+      <Route path="/projects/:projectid" element={<ProjectsDetail projectsData={projectsData} />}/>  
 
     </Routes>
     

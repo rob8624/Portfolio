@@ -3,6 +3,8 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useRef } from 'react';
 
+import { Link } from 'react-router-dom'
+
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import '../css/projects.css';
@@ -80,6 +82,7 @@ return(
         <div className='main-projects-title title-slide' ref={projectsRef}>Projects</div>
        
             { projectsData.map((items, index) => (
+            <Link to={`/projects/${items.id}`}>
               <div className='projects-items-flex fade' key={items.id}>
                     <div className='description-flex'>
                         <div className='projects-title'>{ items.title }</div>
@@ -89,6 +92,7 @@ return(
                     <img className='projects-image' alt="productimage" src={ items.imageUrl }/>
                
                </div>
+            </Link>
             ))}
         </div>
     
