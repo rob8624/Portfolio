@@ -1,12 +1,51 @@
 import '../css/projects-detail.css';
 
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import pb from '../services/pocketbase';
+
+
 
 
 export default function ProjectsDetail( { projectsData } ) {
-    console.log('projects', projectsData)
-    return(
+    const { projectId, projectSlug } = useParams(); 
+    const [projectData, setProjectData] = useState(null);
+    const [loading, setLoading] = useState(null);
+
+    useEffect(() => {
+        
+       const fetchData = async () => {
+         try {
+            const data = await pb.collection('projects').getFirstListItem(`id="${projectId}"`)
+            console.log('data', data)
+            setProjectData(data)
+            setLoading(false);
+            
+            
+         } catch (error) {
+                console.log('cant get data')
+                setLoading(false)         
+            }
+      
+       }  
+
+       fetchData()
+
+        
+    })
+
+
+    return (
         <div className="projects-detail-flex">
-            <div>Hello</div>
+            {projectData ? (
+                <>
+                    <h1>{projectData.title}</h1>
+                    <p>{projectData.description}</p>
+                    {/* Add other fields you want to display */}
+                </>
+            ) : (
+                <p>Project not found.</p>
+            )}
         </div>
-    )
+    );
 }

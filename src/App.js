@@ -132,7 +132,7 @@ return (
       </>
       }/>
 
-      <Route path="/projects/:projectSlug" element={<ProjectsDetail projectsData={projectsData} />}/>  
+      <Route path="/projects/:projectId/:projectSlug" element={<ProjectsDetail projectsData={projectsData} />}/>  
 
     </Routes>
     

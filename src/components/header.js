@@ -3,6 +3,8 @@ import '../css/header.css';
 import { useState, useEffect } from 'react';
 import { throttle } from 'lodash';
 
+import { Link } from 'react-router-dom'
+
 
 export default function Header({ headerData, activeIndex }) {
     const [opacity, setOpacity] = useState(1)
@@ -33,7 +35,7 @@ export default function Header({ headerData, activeIndex }) {
         {headerData.map((items, index) => (
             <div id="header" className='header-flex' key={items.id}>
                 <div id="logo-section">
-                    <div className='title-text centre-text'>{items.Title}</div>
+                    <Link to={"/"} style={{ textDecoration: 'none' }}><div className='title-text centre-text'>{items.Title}</div></Link>
                     <div className='subtitle-text centre-text'>{items.Subtitle}</div>
                 </div>
 

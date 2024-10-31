@@ -87,7 +87,7 @@ return(
                     <div className='description-flex'>
                         <div className='title-flex'>
                             <div className='projects-title'>{ items.title }</div>
-                                <Link to={`/projects/${items.titleSlug}`}>
+                                <Link to={`/projects/${items.id}/${items.titleSlug}`} style={{ textDecoration: 'none' }}>
                                     <div className='info-btn'>More info</div>
                                 </Link>
                             </div>
