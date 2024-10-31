@@ -6,6 +6,7 @@
     transition: opacity ease 1s;
     font-size: clamp(4rem, 6vw, 10rem);
     color: purple;
+   
     
 }
 

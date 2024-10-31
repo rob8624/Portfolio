@@ -42,11 +42,10 @@ export const fetchProjects = async () => {
         const projectsWithImages = data.items.map(project => {
 
             // Generate a URL-friendly slug from the title
-            const titleSlug = project.title
+        const titleSlug = project.title
           .toLowerCase()
-          .replace(/\s+/g, '-')    // Replace spaces with hyphens
-          .replace(/[^a-z0-9-]/g, '');  // Remove special characters
-
+          .replace(/\s+/g, '-')   
+          .replace(/[^a-z0-9-]/g, '');  
 
             return {
                 ...project,

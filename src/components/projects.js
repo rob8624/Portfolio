@@ -82,17 +82,22 @@ return(
         <div className='main-projects-title title-slide' ref={projectsRef}>Projects</div>
        
             { projectsData.map((items, index) => (
-            <Link to={`/projects/${items.titleSlug}`}>
+            
               <div className='projects-items-flex fade' key={items.id}>
                     <div className='description-flex'>
-                        <div className='projects-title'>{ items.title }</div>
+                        <div className='title-flex'>
+                            <div className='projects-title'>{ items.title }</div>
+                                <Link to={`/projects/${items.titleSlug}`}>
+                                    <div className='info-btn'>More info</div>
+                                </Link>
+                            </div>
                         <div className='projects-description'>{ items.description }</div>
                         <div className='tech-stack' ><strong>Stack: </strong>{ items.techstack } </div>
                     </div>
                     <img className='projects-image' alt="productimage" src={ items.imageUrl }/>
                
                </div>
-            </Link>
+            
             ))}
         </div>
     
