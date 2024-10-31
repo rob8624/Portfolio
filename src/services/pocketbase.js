@@ -38,11 +38,19 @@ export const fetchProjects = async () => {
     try {
         
         const data = await pb.collection('projects').getList();
-        
-        
+
         const projectsWithImages = data.items.map(project => {
+
+            // Generate a URL-friendly slug from the title
+            const titleSlug = project.title
+          .toLowerCase()
+          .replace(/\s+/g, '-')    // Replace spaces with hyphens
+          .replace(/[^a-z0-9-]/g, '');  // Remove special characters
+
+
             return {
                 ...project,
+                titleSlug,
                 imageUrl: pb.files.getUrl(project, project.image) 
             };
         });
