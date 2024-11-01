@@ -8,7 +8,7 @@ import pb from '../services/pocketbase';
 
 
 export default function ProjectsDetail( { projectsData } ) {
-    const { projectId, projectSlug } = useParams(); 
+    const { projectId } = useParams(); 
     const [projectData, setProjectData] = useState(null);
     const [loading, setLoading] = useState(null);
 
@@ -17,7 +17,7 @@ export default function ProjectsDetail( { projectsData } ) {
        const fetchData = async () => {
          try {
             const data = await pb.collection('projects').getFirstListItem(`id="${projectId}"`)
-            console.log('data', data)
+            console.log('data', data, loading)
             setProjectData(data)
             setLoading(false);
             
@@ -41,7 +41,7 @@ export default function ProjectsDetail( { projectsData } ) {
                 <>
                     <h1>{projectData.title}</h1>
                     <p>{projectData.description}</p>
-                    {/* Add other fields you want to display */}
+                  
                 </>
             ) : (
                 <p>Project not found.</p>
