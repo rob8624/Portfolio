@@ -9,12 +9,10 @@
 }
 
 .main-projects-title {
-    font-size: clamp(6rem, 7vw, 10rem);/* Adjust as needed */
+    font-size: clamp(6rem, 7vw, 10rem);
     font-family: var(--projects-title-font);
     color: var(--projects-title-color);
-    padding-bottom: 10%;
-    
-   
+    padding-bottom: 8%;
 }
 
 
@@ -25,6 +23,7 @@
     padding-bottom:  100px;
     gap:2px;
     position: relative;
+    
 }
 
 .title-flex {
@@ -44,8 +43,14 @@
     margin: 10px;
     font-size: clamp(0.3rem, 0.8rem, 1rem);
     white-space: pre;
-    text-decoration: none !important; /* Remove underline */
-    color: black !important; /* Set color explicitly */
+    text-decoration: none; 
+    color: black;
+    transition: padding 0.3s ease;
+}
+
+.info-btn:hover{
+    background-color: rgb(200, 183, 200);
+    padding: 5px;
 }
 
 .description-flex {
@@ -62,6 +67,7 @@
 .projects-title {
     font-size: clamp(2rem, 2vw, 4rem);
     color: black;
+    cursor: default;
     
 }
 

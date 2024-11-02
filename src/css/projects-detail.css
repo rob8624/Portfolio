@@ -1,3 +1,36 @@
 .projects-detail-flex {
-    margin-top:100px;
+    margin:0 auto;
+    margin-top: 100px;
+    justify-items: center;
+    width: 90vw;
+}
+
+.detail-title {
+    font-family:var(--projects-title-font);
+    font-size:clamp(3rem, 4vw, 5rem);
+    text-align: center;
+}
+
+.detail-description {
+    font-family: var(--detail-description-font);
+    font-weight: 600;
+}
+
+.detail-main {
+    margin-top: 10px;
+    font-family: var(--detail-main-font);
+}
+
+
+
+@media (min-width: 768px) {
+    .projects-detail-flex {
+        width: 90vw;
+    }
+}
+
+@media (min-width: 1200px) {
+    .projects-detail-flex {
+        width: 50vw;
+    }
 }

@@ -23,6 +23,9 @@
 
     --projects-description-font:"Raleway", sans-serif;
 
+    --detail-description-font: "Raleway", sans-serif;
+    --detail-main-font: "Raleway", sans-serif;
+
     /* color */
     --header-title-color: HSL(283, 78%, 44%);
     --header-bg-color: white;

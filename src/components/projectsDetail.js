@@ -39,8 +39,10 @@ export default function ProjectsDetail( { projectsData } ) {
         <div className="projects-detail-flex">
             {projectData ? (
                 <>
-                    <h1>{projectData.title}</h1>
-                    <p>{projectData.description}</p>
+                    <h1 className="detail-title">{projectData.title}</h1>
+                    <p className='detail-description'>{projectData.description}</p>
+                    <hr class="solid"></hr>
+                    <div className='detail-main' dangerouslySetInnerHTML={{ __html: projectData.detail }}></div>
                   
                 </>
             ) : (
