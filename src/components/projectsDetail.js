@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import pb from '../services/pocketbase';
 
-
+import HashLoader from "react-spinners/HashLoader";
 
 
 export default function ProjectsDetail( { projectsData } ) {
@@ -46,7 +46,7 @@ export default function ProjectsDetail( { projectsData } ) {
                   
                 </>
             ) : (
-                <p>Project not found.</p>
+                <HashLoader color="black" size="150"  className='loader' />
             )}
         </div>
     );

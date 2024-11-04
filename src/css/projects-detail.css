@@ -5,6 +5,10 @@
     width: 90vw;
 }
 
+.loader {
+    margin: 0 auto;
+}
+
 .detail-title {
     font-family:var(--projects-title-font);
     font-size:clamp(3rem, 4vw, 5rem);

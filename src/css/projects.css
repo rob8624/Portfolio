@@ -13,6 +13,7 @@
     font-family: var(--projects-title-font);
     color: var(--projects-title-color);
     padding-bottom: 8%;
+    text-shadow: 2px 2px #e3b9df;
 }
 
 

@@ -33,6 +33,7 @@
     color:purple;
     transition: 1s ease;
     cursor: pointer;
+    text-shadow: 2px 2px #e3b9df;
 }
 
 
@@ -70,9 +71,8 @@
 }
    
 .logo-image {
-    width: 100%;
-    
-}
+    width: 50%;
+    }
 
 .logo-item {
     display: flex;
