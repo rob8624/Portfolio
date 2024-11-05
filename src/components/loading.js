@@ -2,7 +2,7 @@
 import '../css/loading.css';
 import React, { useState, useEffect } from 'react';
 
-export default function Loading({ progress, cachedData }) {
+export default function Loading({ progress }) {
   const [loadingComplete, setLoadingComplete] = useState(false);
 
   useEffect(() => {

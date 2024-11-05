@@ -48,3 +48,24 @@ body {
    
 }
 
+.loader-wrapper {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center;     /* Vertical centering */
+    height: 100vh;           /* Full viewport height */
+    width: 100vw;            /* Full viewport width */
+    position: fixed;         /* Stays in place even when scrolling */
+    top: 0;
+    left: 0;
+    background-color: rgba(230, 198, 225, 0.8); /* Optional: light overlay */
+    z-index: 999;            /* Ensures it stays on top of other elements */
+    opacity: 0;
+    visibility: hidden; /* Start hidden */
+    transition: opacity 3s ease-in;
+}
+
+.loader-wrapper.active {
+   opacity: 1; 
+   visibility: visible; /* Start hidden */
+}
+

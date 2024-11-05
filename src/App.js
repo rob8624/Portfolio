@@ -9,12 +9,12 @@ import Header from './components/header.js';
 import Hero from './components/hero.js';
 import About from './components/about.js';
 import Projects from './components/projects.js';
-import Loading from './components/loading.js';
 import BackToTop from './components/backtotop.js';
 import ProjectsDetail from './components/projectsDetail.js';
 
 import { Routes, Route } from 'react-router-dom';
 
+import HashLoader from "react-spinners/HashLoader";
 
 
 
@@ -27,14 +27,14 @@ function App() {
   const [projectsData, setProjects] = useState([])
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(true)
-  const [progress, setProgress] = useState(0)
+  
 
   const projectsRef = useRef(null)
 
   
   const data = useRef({})
 
-  const cachedData = JSON.parse(localStorage.getItem('apidata'));
+  
  
   useEffect(() => {
     const authenticateUser = async () => {
@@ -60,38 +60,38 @@ function App() {
           return; // Skip fetching new data
         }
 
-        setProgress(10);
+       
         console.log('Authentication successful:', authData);
         
         const headerData = await fetchHeaderData();
         setHeaderData(headerData.items);
         data.current.headerData = headerData.items;
-        setProgress(20);
+       
 
         const heroData = await fetchHeroData();
         setHeroData(heroData.items);
         data.current.heroData = heroData.items; 
-        setProgress(40);
+        
 
         const socialsData = await fetchSocialsData();
         setSocialsData(socialsData.items);
         data.current.socialsData = socialsData.items;
-        setProgress(60);
+       
 
         const aboutData = await fetchAboutData();
         setAboutData(aboutData.items);
         data.current.aboutData = aboutData.items;
-        setProgress(80);
+        
 
         const skillsLogos = await fetchSkillsLogos();
         setSkillsLogos(skillsLogos);
         data.current.skillsLogos = skillsLogos;
-        setProgress(90);
+        
 
         const projectsData = await fetchProjects();
         setProjects(projectsData)
         data.current.projectsData = projectsData;
-        setProgress(100);
+        
        
         setLoading(false);
         console.log(data);
@@ -111,7 +111,9 @@ function App() {
   
 return (
   <>
-  {  loading ? <Loading progress={progress} cachedData={cachedData}/> :
+  {  loading ? <div className={`loader-wrapper ${loading ? "active" : " "} `}>
+    <HashLoader color="black" size="150"  className='loader'/>
+    </div> :
   <div>
    <Header headerData={headerData} activeIndex={activeIndex} />
    <Routes>
