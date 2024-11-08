@@ -26,6 +26,8 @@
     --detail-description-font: "Raleway", sans-serif;
     --detail-main-font: "Raleway", sans-serif;
 
+    --footer-font: "Raleway", sans-serif;
+
     /* color */
     --header-title-color: HSL(283, 78%, 44%);
     --header-bg-color: white;
@@ -34,6 +36,9 @@
     --hero-message-color: black;
 
     --projects-title-color: black;
+
+    --footer-bg-color: hsla(275, 100%, 98%, 1);
+    --footer-text-color: black;
     
 }
 
@@ -50,22 +55,22 @@ body {
 
 .loader-wrapper {
     display: flex;
-    justify-content: center; /* Horizontal centering */
-    align-items: center;     /* Vertical centering */
-    height: 100vh;           /* Full viewport height */
-    width: 100vw;            /* Full viewport width */
-    position: fixed;         /* Stays in place even when scrolling */
+    justify-content: center; 
+    align-items: center;     
+    height: 100vh;           
+    width: 100vw;            
+    position: fixed;        
     top: 0;
     left: 0;
-    background-color: rgba(230, 198, 225, 0.8); /* Optional: light overlay */
-    z-index: 999;            /* Ensures it stays on top of other elements */
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 999;            
     opacity: 0;
-    visibility: hidden; /* Start hidden */
+    visibility: hidden; 
     transition: opacity 3s ease-in;
 }
 
 .loader-wrapper.active {
    opacity: 1; 
-   visibility: visible; /* Start hidden */
+   visibility: visible; 
 }
 

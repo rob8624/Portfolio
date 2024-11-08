@@ -1,0 +1,14 @@
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    background-color: var(--footer-bg-color)
+}
+
+.footer-text {
+    color: var(--footer-text-color);
+    font-family: var(--footer-font);
+    font-size: clamp(0.5rem, 0.8rem, 3rem);
+    
+}
